@@ -1,8 +1,8 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
-public class cat_walk : MonoBehaviour
+public class CatWalk: MonoBehaviour
 {
-    public float speed = 30f;
+    public float speed = 28f;
     private Rigidbody2D rb2d;
     private Animator animator;
 
@@ -20,10 +20,10 @@ public class cat_walk : MonoBehaviour
         Vector2 movement = new Vector2(moveX, moveY);
         rb2d.MovePosition(rb2d.position + movement * speed * Time.deltaTime);
 
-        // Détection de mouvement
+        // DÃ©tection de mouvement
         bool isWalking = movement != Vector2.zero;
 
-        // Mise à jour de l'animation
+        // Mise Ã  jour de l'animation
         animator.SetBool("isWalking", isWalking);
     }
 }
